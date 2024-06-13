@@ -13,7 +13,7 @@ def print_banner():
 
 def print_menu():
     print(f"{Fore.RED}Made by s3al4er")
-    print(f"{Fore.GREEN}Attacks: \n{Fore.BLUE}1. Deauth\n2. Beacon Flood\n3. Packet Phaser")
+    print(f"{Fore.GREEN}Attacks: \n{Fore.BLUE}1. Deauth\n2. Beacon Flood\n3. Packet Fuzzer")
 
 def wlan_mon():
     print(f"{Fore.GREEN}Select a wireless interface to monitor: ")
@@ -44,7 +44,7 @@ def beacon_flood_attack(wlanmon):
     os.system(f"sudo mdk4 {wlanmon} b -B {bssid}")
 
 def dos_attack(wlanmon):
-    print("WARNING: Packet Phaser attacks are extremely dangerous. Do you really want to run it? (y/n)")
+    print("WARNING: Packet Fuzzer attacks are extremely dangerous. Do you really want to run it? (y/n)")
     start_dos = input()
     if start_dos.lower() == "y":
         print("Scanning networks...")
